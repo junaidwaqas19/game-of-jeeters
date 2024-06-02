@@ -1,0 +1,265 @@
+.backgroundContainer {
+    background-color: #646456;
+    position: relative;
+}
+
+.contentContainer {
+    height: 100vh;
+    padding: 40px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    flex-direction: row;
+}
+
+.leftImageContainer {
+    flex: 0 0 auto;
+    margin-right: 20px;
+    margin-left:5px;
+    margin-top: 60px;    
+    padding-top: 100px;
+}
+
+.leftImage {
+    height: 480px;
+    width: 550px;
+}
+
+.rightContent {
+    padding: 80px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    position: relative;
+     /* Ensure relative positioning for loading animation */
+}
+
+.heading {
+    font-family: 'JejuHallasan';
+    font-size: 40px;
+    font-weight: 600;
+    align-items: center;
+    color: white;
+    margin-bottom: 15px;
+    margin-top: 50px;
+    margin-left:60px;
+    text-border: 1px solid black;
+    text-shadow: 2px 2px 5px black;
+}
+
+.paragraphContainer {
+    padding-left: 10px;
+    margin-bottom: 30px;
+    padding-right: 1px
+}
+
+.paragraph {
+    font-family: 'Krub';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 33px;
+    text-align: center;
+    margin-left:1.5rem;
+    margin-right:0.3rem;
+    color: #E0C053;
+    margin-bottom: 0;
+    text-shadow: 2px 2px 5px black;
+}
+
+.button {
+    font-family: 'JejuHallasan';
+    padding: 10px 20px;
+    margin-left:40px;
+    font-size: 18px;
+    background-color: #E0C053;
+    color: black;
+    border: none;
+    border-bottom: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.backgroundImage {
+    position: absolute;
+    top: 30px;
+    right: 1.4rem;
+    bottom: 1px;
+    width: 700px;
+    background-image: url("/image/IMG_06291.png");
+    background-size: cover;
+    opacity: 0.7;
+    z-index: 0;
+}
+
+.newImage {
+    position: absolute;
+    bottom: 0;
+    right: 40px;
+    height: 200px;
+    z-index: 2;
+    opacity: 0.9;
+}
+
+/* Loading animation */
+.loadingAnimation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #fff; /* White dots */
+    border-radius: 50%;
+    margin: 0 5px;
+    animation: blink 1s infinite alternate;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1200px) {
+    .contentContainer {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .leftImageContainer,
+    .rightContent {
+        margin: 0;
+        padding: 20px;
+    }
+
+    .leftImage {
+        height: auto;
+        width: 100%;
+        max-width: 550px;
+    }
+
+    .heading {
+        font-size: 30px;
+    }
+
+    .paragraph {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .button {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contentContainer {
+        height: auto;
+        padding: 10px;
+    }
+
+    .leftImageContainer {
+        margin-top: 20px; /* Increase top margin */
+        padding-top: 0;
+    }
+
+    .leftImage {
+        height: auto;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .rightContent {
+        padding: 20px;
+    }
+
+    .heading {
+        font-size: 25px;
+        margin-top: 10px;
+    }
+
+    .paragraph {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .button {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .backgroundImage{
+        display:none;
+    }
+    .contentContainer {
+        flex-direction: column;
+        padding-right: 5px;
+        height:100%;
+        left:0;
+    }
+
+    .leftImageContainer {
+        margin-top: 100px;
+        padding: 0;
+        margin-bottom:100px;
+    }
+    .newImage{
+        display:none;
+    }
+    .leftImage {
+        height: 100%;
+        width: 100%;
+        
+    }
+
+    .rightContent {
+        padding: 5px;
+        top:-5vh;
+        right:2vh;
+    }
+
+    .heading {
+        font-size: 20px;
+    }
+
+    .paragraph {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .button {
+        font-size: 12px;
+        margin-bottom:40px;
+    }
+}
+
+/* New styles added for additional requirements */
+@media (max-width: 480px) {
+    .additionalContent {
+        font-size: 16px;
+        line-height: 32px;
+    }
+
+    .highlight {
+        font-size: 16px;
+    }
+
+    .highlight span {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,215 @@
+@font-face {
+  font-family: "JejuHallasan";
+  src: url("https://db.onlinewebfonts.com/t/2da952d097bffd198ec0f0aa3fdd6804.eot");
+  src: url("https://db.onlinewebfonts.com/t/2da952d097bffd198ec0f0aa3fdd6804.eot?#iefix") format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/2da952d097bffd198ec0f0aa3fdd6804.woff2") format("woff2"),
+    url("https://db.onlinewebfonts.com/t/2da952d097bffd198ec0f0aa3fdd6804.woff") format("woff"),
+    url("https://db.onlinewebfonts.com/t/2da952d097bffd198ec0f0aa3fdd6804.ttf") format("truetype"),
+    url("https://db.onlinewebfonts.com/t/2da952d097bffd198ec0f0aa3fdd6804.svg#JejuHallasan") format("svg");
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(180deg, #272727 0%, #646456 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.logo {
+  position: absolute;
+  top: 35px;
+  right: 100px;
+}
+
+.logo img {
+  height: 270px;
+  width: 400px;
+}
+
+.imageContainer {
+  margin-top: 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 455px);
+  gap: 0px;
+}
+
+.imageWrapper {
+  position: relative;
+  text-align: center;
+}
+
+.imageWrapper img {
+  height: 100px;
+  width: 250px;
+}
+
+.textOverlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'JejuHallasan';
+  font-size: 25px; /* Fixed font size for desktop */
+  font-weight: 600;
+  line-height: 25px; /* Adjust line height accordingly */
+  color: #5E2F2F;
+  padding: 2px;
+}
+
+.backgroundImage {
+  position: absolute;
+  left: 0px;
+  top: 110px;
+  bottom: 40px;
+}
+
+.backgroundImage img {
+  height: 530px;
+  width: 760px;
+}
+
+.leftSideImage {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 20vw; /* Adjust width for smaller screens */
+  max-width: 200px; /* Maximum width for smaller screens */
+  height: auto;
+}
+
+.leftSideImage img {
+  max-width: 100%;
+  height: auto;
+}
+@media (min-width: 768px) {
+  .NavMobileLink img {
+      display: none;
+  }
+  .enterText span{
+    display:none;
+  }
+}
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .logo {
+    top: 3vh; /* More space from the top */
+    left: 5vw;
+    right:1vw;   /* More margin from the left to center the logo */
+    transform: translateX(-5vw); /* Adjust to keep the logo centered */
+    
+  }
+ 
+ .NavMobileLink{
+  position:absolute;
+  height:15vh;
+  width:100vh;
+  bottom:7vh;
+  z-index:9;
+}
+.NavMobileLink {
+  position: absolute; /* Position the container absolutely */
+  bottom: 4vh; /* Align the container to the bottom */
+  left: 0; /* Align the container to the left */
+  width: 100%; /* Ensure the container spans the entire width */
+}
+
+.enterText {
+  position: absolute; /* Position the text absolutely */
+  bottom: 30px; /* Adjust as needed to position the text */
+  left: 50%; /* Align the text horizontally */
+  transform: translateX(-50%); /* Center the text horizontally */
+  z-index: 10; /* Ensure the text appears on top of the image */
+}
+
+.enterText span {
+  color: white; /* Set text color */
+  font-family: "JejuHallasan"; /* Set font family */
+  font-size: 50px; /* Set font size */
+  font-weight: 600; /* Set font weight */
+}
+
+  .logo img {
+    height: 28vh;
+    width: 100vw; /* Adjust width to make it more prominent */
+  }
+
+  .imageContainer {
+    display: none; /* Hide the image buttons on mobile */
+  }
+
+  .backgroundImage {
+     /* Hide the background image on mobile */
+  left: 0;
+  right: 0;
+  width: 100%; /* Full width */
+  height: 2vh;
+  margin-top: 8vh; /* Increased top margin */
+  margin-bottom: 0; /* Bottom margin set to */
+  }
+
+ 
+.leftSideImage img {
+  width: 100vh;
+  height:30vh;
+  object-fit: cover; /* Ensure image covers the container */
+}
+
+.mobileNav {
+  position:absolute;
+  Top:32vh;
+  left:5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mobileImageWrapper {
+  position: relative;
+  text-align: center;
+}
+
+.mobileImage {
+  height: 100px;
+  width: 250px;
+}
+
+.mobileTextOverlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'JejuHallasan';
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 25px;
+  color: #5E2F2F;
+  padding: 2px;
+}
+
+
+}
+
+/* iPads, Tablets */
+@media (min-width: 481px) and (max-width: 1024px) {
+  .textOverlay {
+    font-size: 20px; /* Adjust font size for iPads and tablets */
+    line-height: 20px; /* Adjust line height accordingly */
+  }
+
+  .leftSideImage {
+    width: 80vw; /* Adjust width for tablets */
+    max-width: 400px; /* Maximum width for tablets */
+  }
+}
+
+/* Desktops, large screens */
+@media (min-width: 1025px) {
+  .leftSideImage {
+    height: 600px; /* Fixed height for desktops and large screens */
+  }
+}
